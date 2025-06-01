@@ -76,11 +76,18 @@ body {
     background-color: #dfefff;
     cursor: grab;
   }
+  
+  .component img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
 
   #rackSlots {
     position: relative;
     height: 420px; /* or based on totalSlots * slotHeight */
-    border: 1px solid #444;
+    border: 0px solid #444;
     height: auto;
   }
   
