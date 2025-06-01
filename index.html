@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Center Rack Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1><button id="showInstructions">i</button>Server Rack Visualizer</h1>
+  
+
+<div id="instructionsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>How to Use the Rack Visualizer</h2>
+    <ul>
+      <li>Drag and drop components to place them.</li>
+      <li>Click a placed component to remove it.</li>
+      <li>Use the rack usage counter at the bottom to monitor capacity.</li>
+      <h4>This concept could be further exploited by adding further features such as: </h4>
+      <li>exporting the rack view to a file,</li>
+      <li>Adding a dropdown to display categories of components at a time 
+        (servers, switches, patch panels, other)
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  <div class="container">
+    <!-- Component panel -->
+    <div class="components-panel">
+      <h2>Available Components</h2>
+      <div class="component" draggable="true" data-size="1">1U Server<img src="https://caleyrrrrrrrrrrrr.github.io/jhub-web1/1u-server.jpg" width="100%"></div>
+      <div class="component" draggable="true" data-size="1">1U Switch<img src="https://caleyrrrrrrrrrrrr.github.io/jhub-web1/1u-switch.png" width="100%"></div>
+      <div class="component" draggable="true" data-size="1">Patch Panel<img src="https://caleyrrrrrrrrrrrr.github.io/jhub-web1/1u-patchpanel.png" width="100%"></div>
+      <div class="component" draggable="true" data-size="1">Blanking Plate<img src="https://caleyrrrrrrrrrrrr.github.io/jhub-web1/1u-blankplate.png" width="100%"></div>
+      <div class="component" draggable="true" data-size="2">2U Server<img src="https://caleyrrrrrrrrrrrr.github.io/jhub-web1/2u-server.jpg" width="100%"></div>
+      <div class="component" draggable="true" data-size="2">2U UPS<img src="https://caleyrrrrrrrrrrrr.github.io/jhub-web1/2U-UPS.png" width="100%"></div>
+      <div class="component" draggable="true" data-size="3">3U Server<img src="https://caleyrrrrrrrrrrrr.github.io/jhub-web1/3u-server.jpg" width="100%"></div>
+    </div>
+
+    <!-- Rack -->
+    <div class="rack">
+      <h2>Rack <input type="number" id="numberInput" name="numberInput" value="10" min="0" max="50" step="1">U </h2>
+      <div id="rackSlots"></div>
+      <div class="rack-info"><span id="usedU"></span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
