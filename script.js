@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const slotWrapper = document.createElement("div");
         slotWrapper.classList.add("rack-slot-wrapper");
       
-        // Create the U number (label)
+        // Create the U number 
         const uNumber = document.createElement("div");
         uNumber.classList.add("u-number-label");
         uNumber.textContent = `${i + 1}U`;
